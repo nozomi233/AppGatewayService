@@ -28,7 +28,7 @@ public class RpcClient<T> implements InvocationHandler {
         this.addr = new InetSocketAddress(ip, Integer.parseInt(port));
     }
 
-    public T getClientIntance() {
+    public T getClientInstance() {
         /*传入被代理的类*/
         return (T) Proxy.newProxyInstance(serviceInterface.getClassLoader(), new Class<?>[]{serviceInterface}, this);
     }

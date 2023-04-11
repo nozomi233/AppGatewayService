@@ -22,6 +22,7 @@ public class RMIClient {
 //        }
         try {
             IUserService userService = (IUserService) registry.lookup("userService");
+            // 这里会调用到服务端里面的方法
             User user = userService.findById(1);
             System.out.println(user.getId()+"-----"+ user.getName());
         } catch (NotBoundException e) {

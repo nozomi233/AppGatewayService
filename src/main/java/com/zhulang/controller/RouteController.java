@@ -12,12 +12,12 @@ public class RouteController {
     @RequestMapping("/test")
     public String Test(){
         RpcClient client = new RpcClient<>(IService.class, "localhost", "7777");
-        IService hello = (IService) client.getClientIntance();
+        IService hello = (IService) client.getClientInstance();
         /*调用成功 打印返回值*/
         System.out.println(hello.getTest("RPC"));
 
         RpcClient loginPrcClient = new RpcClient<>(ILoginService.class, "localhost", "7777");
-        ILoginService iLoginService = (ILoginService) loginPrcClient.getClientIntance();
+        ILoginService iLoginService = (ILoginService) loginPrcClient.getClientInstance();
         /*调用成功 打印返回值*/
         System.out.println(iLoginService.login("登录成功了"));
         return "祝浪hello";

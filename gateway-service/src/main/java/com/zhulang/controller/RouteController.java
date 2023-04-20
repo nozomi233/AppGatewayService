@@ -1,7 +1,7 @@
 package com.zhulang.controller;
 
-import com.zhulang.iface.ILoginService;
-import com.zhulang.iface.IService;
+import com.zhulang.common.iface.ILoginService;
+import com.zhulang.common.iface.IService;
 import com.zhulang.rpc.RpcClient;
 import lombok.Data;
 import org.springframework.web.bind.annotation.*;

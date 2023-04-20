@@ -1,7 +1,7 @@
 package com.zhulang.rmi;
 
-import com.zhulang.dto.User;
-import com.zhulang.iface.IUserService;
+import com.zhulang.common.dto.User;
+import com.zhulang.common.iface.IUserService;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;

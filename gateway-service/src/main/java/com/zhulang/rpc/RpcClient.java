@@ -1,5 +1,7 @@
 package com.zhulang.rpc;
 
+import org.springframework.stereotype.Component;
+
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.lang.reflect.InvocationHandler;

@@ -36,6 +36,7 @@
 		<commons-lang3.version>3.12.0</commons-lang3.version>
 		<hessian.version>4.0.62</hessian.version>
 		<com.zhulang.common.version>1.0.0-SNAPSHOT</com.zhulang.common.version>
+		<fastjson.version>1.2.83</fastjson.version>
 	</properties>
 
 
@@ -60,6 +61,13 @@
 			<artifactId>common-iface</artifactId>
 			<version>${com.zhulang.common.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

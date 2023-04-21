@@ -19,10 +19,10 @@ public class DynamicSubject implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("before calling" + method);
+        System.out.println("before calling：" + method);
         Object invoke = method.invoke(sub, args);
         System.out.println(args == null);
-        System.out.println("after calling" + method);
+        System.out.println("after calling：" + method);
         return invoke;
     }
 }

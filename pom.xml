@@ -20,6 +20,7 @@
 
 	<properties>
 		<revision>1.0.0-SNAPSHOT</revision>
+		<lombok.version>1.18.24</lombok.version>
 		<plugin.compiler.version>3.5.1</plugin.compiler.version>
 		<global.jdk.version>1.8</global.jdk.version>
 		<global.encoding>UTF-8</global.encoding>
@@ -35,40 +36,50 @@
 		<mybatis-spring-boot-starter.version>2.2.2</mybatis-spring-boot-starter.version>
 		<commons-lang3.version>3.12.0</commons-lang3.version>
 		<hessian.version>4.0.62</hessian.version>
-		<com.zhulang.common.version>1.0.0-SNAPSHOT</com.zhulang.common.version>
+		<com.zhulang.common.version>1.0.0-RELEASE</com.zhulang.common.version>
 		<fastjson.version>1.2.83</fastjson.version>
+		<spring-boot-starter-web.version>2.7.3</spring-boot-starter-web.version>
+		<spring-boot-starter-actuator.version>2.7.3</spring-boot-starter-actuator.version>
 	</properties>
 
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring-boot-starter-web.version}</version>
+			</dependency>
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.zhulang</groupId>
-			<artifactId>common-iface</artifactId>
-			<version>${com.zhulang.common.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>${fastjson.version}</version>
-		</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
 
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-actuator</artifactId>
+				<version>${spring-boot-starter-actuator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.zhulang</groupId>
+				<artifactId>common-iface</artifactId>
+				<version>${com.zhulang.common.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
 
-	</dependencies>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<pluginManagement>
